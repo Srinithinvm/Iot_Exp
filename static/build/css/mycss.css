@@ -1,0 +1,38 @@
+.move{
+    
+   height:70px;
+   width:70px;
+    background-color:lightgrey;
+   margin-left:1100px;
+   margin-top: 300px;
+    border-radius: 50%;
+    position:sticky;
+    
+}
+.plus{
+width:30px;
+height:20px;
+background-color:lightgrey;
+
+border-radius: 60%;
+padding-top: 20px;
+margin-top:5px;
+margin-left: 25px;
+
+}
+.Device_Name{
+margin-right: 100px;
+
+}
+.input_pins{
+    display: flex;
+    margin-left: 50px;
+}
+.arrange{
+    display:flex;
+    margin-left: 50px;
+}
+.box1{
+    display:flex;
+    justify-content: space-evenly;
+}
