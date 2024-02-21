@@ -15,6 +15,10 @@ def dash():
 def form():
     return render_template("form.html")
 
+@app.route("/Dev_details")
+def Dev_details():
+    return render_template("form_advanced.html")
+
 if __name__ == "__main__":
 
 
