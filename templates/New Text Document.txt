@@ -1,0 +1,3 @@
+		if((id!=""&&model!=""&&hw!=""&&sw!=""&&status!="")){
+			window.location.replace("form_advanced.html");
+		}

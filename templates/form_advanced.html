@@ -50,7 +50,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="form.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <a href="dash.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
             </div>
 
             
@@ -134,7 +134,7 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main"style="height:750px">
+        <div class="right_col" role="main"style="height:800px">
           
             <div class="page-title">
               <div class="title_left">
@@ -149,7 +149,7 @@
             <div class="row" >
               <!-- Device Details -->
              
-              <div class="col-md-3 col-sm-5  "style="margin-right:50px;">
+              <div class="col-md-3 col-sm-5  "style="margin-right:50px;height:200px">
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Device Details:-</h2>
@@ -161,42 +161,30 @@
                   </div>
                   <div class="x_content">
                     <br />
-                    <div class="arrange">
-                      <div style="margin-right: 20px;">
-                    <div >
-                    <label>ID:</label>
+                    
+                      
+                      <div style="margin-left: 30px;">
+                        {% for rows in Result %} 
+                        <div >
+                    <label>ID<h style="margin-left:75px;font-size:20px">:</h><h style="margin-left:10px"id="data1">{{rows[0]}}</h></label>
                   </div>
-                  <div style="margin-bottom: 10px;">
-                    <label>Model:</label>
+                  <div style="margin-bottom: 0px;">
+                    <label>Model<h style="margin-left:55px;font-size:20px">:</h><h style="margin-left:10px"id="data2">{{rows[1]}}</h></label>
                   </div>
-                  <div style="margin-bottom: 10px;">
-                    <label>HW Version:</label>
+                  <div style="margin-bottom: 0px;">
+                    <label>HW Version<h style="margin-left:20px;font-size:20px">:</h> <h style="margin-left:10px"id="data3">{{rows[2]}}</h></label>
                   </div>
-                  <div style="margin-bottom: 10px;">
-                    <label>SW Version:</label>
+                  <div style="margin-bottom: 0px;">
+                    <label>SW Version<h style="margin-left:20px;font-size:20px">:</h><h style="margin-left:10px"id="data4">{{rows[3]}}:</h></label>
                   </div>
-                  <div style="margin-bottom: 10px;">
-                    <label>Status:</label>
+                  <div >
+                    <label>Device_Name<h style="margin-left:5px;font-size:20px">:</h><h style="margin-left:10px"id="data5">{{rows[4]}}</h></label>
                   </div>
-                  </div>
-                  <div>
-                    <div style="margin-bottom: 15px;">
-                    <h>Innggjj:</h>
-                  </div>
-                  <div style="margin-bottom: 15px;">
-                    <h>Innggjj:</h>
-                  </div>
-                  <div style="margin-bottom: 15px;">
-                    <h>Innggjj:</h>
-                  </div>
-                  <div style="margin-bottom: 15px;">
-                    <h>Innggjj:</h>
-                  </div>
-                  <div style="margin-bottom: 15px;">
-                    <h>Innggjj:</h>
-                  </div>
-                  </div>
+                  {% endfor %}
                 </div>
+                  
+                
+                
                   <div class="ln_solid"></div>
                 
                   </div>
@@ -235,7 +223,7 @@
                                                     <input type="checkbox" class="js-switch" checked />  Relay 3
                                                 </label>
                                               </div>
-                                              <div >
+                                              <div  style="margin-bottom: 10px;">
                                                 <label >
                                                   <input type="checkbox" class="js-switch" checked />  Relay 4
                                                 </label>                        
@@ -347,7 +335,7 @@
                               </label>
                             </div>
                             
-                            <div class="checkbox"style="margin-bottom: 13px;">
+                            <div class="checkbox"style="margin-bottom: 23px;">
                               <label>
                                 <input type="checkbox" class="flat" checked="checked"> Input 8
                               </label>
@@ -390,34 +378,20 @@
                     <div class="arrange">
                       <div style="margin-right: 20px;">
                     <div >
-                    <label>Signal:</label>
+                    <label>Signal<h style="margin-left:30px;font-size:20px">:</h><h style="margin-left:5px;"><i class="fa fa-signal"style="font-size:24px;margin-left:15px;"></i></h></label>
                   </div>
                   <div style="margin-bottom: 10px;">
-                    <label>Operator:</label>
+                    <label>Operator<h style="margin-left:15px;font-size:20px">:</h><h style="margin-left:20px">Airtel</h></label>
                   </div>
                   <div style="margin-bottom: 10px;">
-                    <label>Client ID:</label>
+                    <label>Client ID<h style="margin-left:15px;font-size:20px">:</h><h style="margin-left:20px">E54UF</h></label>
                   </div>
                   <div>
-                    <label>IP Address:</label>
+                    <label>IP Address<h style="margin-left:5px;font-size:20px">:</h><h style="margin-left:15px">192.168.151.5</h></label>
                   </div>
                   
                   </div>
-                  <div>
-                    <div style="margin-bottom: 15px;">
-                    <h>Innggjj:</h>
-                  </div>
-                  <div style="margin-bottom: 15px;">
-                    <h>Innggjj:</h>
-                  </div>
-                  <div style="margin-bottom: 15px;">
-                    <h>Innggjj:</h>
-                  </div>
-                  <div >
-                    <h>Innggjj:</h>
-                  </div>
                   
-                  </div>
                 </div>
                       <div class="ln_solid"></div>
 
@@ -431,13 +405,8 @@
               <div class="col-md-8 col-sm-20  " style="margin-left:40px;">
                 <div class="x_panel">
                  
-                  <div class="x_content"style="height:250px">
-                   
-                    
-
-                      
-                      
-                        <div class="x_panel"style="height:200px">
+                  <div class="x_content"style="height:290px">
+                        <div class="x_panel"style="height:250px">
                           <div class="x_title">
                             <h2>Last Connected:- </h2>
                             
@@ -579,4 +548,5 @@
     });
 </script>
   </body>
+
 </html>

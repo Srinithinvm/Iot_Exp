@@ -40,7 +40,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -92,7 +92,7 @@
                     <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -104,7 +104,7 @@
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -116,7 +116,7 @@
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                          
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -128,7 +128,7 @@
                       </li>
                       <li class="nav-item">
                         <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        
                           <span>
                             <span>John Smith</span>
                             <span class="time">3 mins ago</span>
@@ -171,6 +171,7 @@
                     </span>
                   </div>
                 </div>
+                
               </div>
             </div>
 
@@ -181,22 +182,23 @@
               <div class="col-md-12">
                 <div class="">
                   <div class="x_content">
-                    <div class="row">
-                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6  ">
-                        <div class="tile-stats"style="height:200px">
-                          <div class="icon"><i class="fa fa-caret-square-o-right"></i>
-                          </div>
-                          <div class="count">Device-1</div>
-
-                          <h3></h3>
-                          <p></p>
-                        </div>
-                      </div>
-                      
+                    <div class="row" id="row">
+                      {% for rows in Result %} 
+                      <a href="/form_advanced.html?_id={{rows[5]}}">
+                      <div class="animated flipIny col-lg-3 col-md-3 col-sm-6 "> 
+                        <div class="tile-stats" style="height:200px">
+                           <div class="icon"><i class="fa fa-caret-square-o-right"></i></div> 
+                           <div class="count"style="height:150px">{{rows[4]}}</div>
+                            </a>  
+                            <button style="margin-left: 200px;border-color:darkgray;" id="{{rows[5]}}" onclick="del(id)"><div class="fa-hover col-md-3 col-sm-4  "><i class="fa fa-trash"></i>
+                            </div>delete</button>
+                          </div> 
+                    </div>
+                     {% endfor %}
                       
                      
                       
-                      <a  href="form.html"> <div class="move">
+                      <a  href="form.html" onclick="module()"> <div class="move">
               <div class="plus">
                 <i  class="fa-thick fa-plus fa-2xl"></i>
               </div>
@@ -241,16 +243,18 @@
     <!-- NProgress -->
     <script src="../static/vendors/nprogress/nprogress.js"></script>    
     <!-- Chart.js -->
-    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!--<script src="../vendors/Chart.js/dist/Chart.min.js"></script>-->
     <!-- jQuery Sparklines -->
     <script src="../static/vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
     <!-- easy-pie-chart -->
     <script src="../static/vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
     <!-- bootstrap-progressbar -->
     <script src="../static/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-
+    <!--My Scripts-->
+    <script src="../static/vendors/bootstrap-progressbar/module.js"></script>
     <!-- Custom Theme Scripts -->
-    <script src="../static/build/js/custom.min.js"></script>
-	
+    <!--<script src="../static/build/js/custom.min.js"></script>-->
+    <script src="../static/build/js/dashboard.js"></script>
   </body>
+
 </html>

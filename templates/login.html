@@ -33,13 +33,15 @@
             <form>
               <h1>Login Form</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" placeholder="Username"id="username" required="" /><p id="error1"style="color:red"></p>
+                
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" placeholder="Password" id="pass"required="" /><p id="error2"style="color:red"></p>
+                
               </div>
               <div style="text-align: center;height:40px">
-                <a class="btn btn-default submit" href="dash.html"style="width:350px;height:45px;border:1px solid gray;padding:10px;">Log in</a>
+                <a class="btn btn-default submit" style="width:350px;height:45px;border:1px solid gray;padding:10px;"onclick="log()"id="log">Log in</a>
                
               </div>
 
@@ -50,42 +52,32 @@
           </section>
         </div>
 
-        <div id="register" class="animate form registration_form">
-          <section class="login_content">
-            <form>
-              <h1>Create Account</h1>
-              <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
-              </div>
-              <div>
-                <input type="email" class="form-control" placeholder="Email" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
-              </div>
-              <div>
-                <a class="btn btn-default submit" href="index.html">Submit</a>
-              </div>
-
-              <div class="clearfix"></div>
-
-              <div class="separator">
-                <p class="change_link">Already a member ?
-                  <a href="#signin" class="to_register"> Log in </a>
-                </p>
-
-                <div class="clearfix"></div>
-                <br />
-
-                <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 4 template. Privacy and Terms</p>
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>
+        
       </div>
     </div>
   </body>
+  <script>
+    function log(){
+    let username=document.getElementById("username").value
+    let pass=document.getElementById("pass").value
+    if(username=="" && pass==""){
+    document.getElementById("error1").innerHTML="Enter username!"
+    document.getElementById("error2").innerHTML="Enter password!"
+    
+    }
+
+ 
+    else if((username=="")||(username.length!=8)){
+	document.getElementById("error1").innerHTML="enter the valid username!";
+	}
+
+
+	else if((pass=="")||(pass.length!=8)){
+			document.getElementById("error2").innerHTML="enter the valid password";
+	}
+    else{
+      window.location.replace("dash.html"); 
+    }
+    }
+    </script>
 </html>

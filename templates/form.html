@@ -67,7 +67,7 @@
 								<ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
 									<li class="nav-item">
 										<a class="dropdown-item">
-											<span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+											
 											<span>
 												<span>John Smith</span>
 												<span class="time">3 mins ago</span>
@@ -79,7 +79,7 @@
 									</li>
 									<li class="nav-item">
 										<a class="dropdown-item">
-											<span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+											
 											<span>
 												<span>John Smith</span>
 												<span class="time">3 mins ago</span>
@@ -91,7 +91,7 @@
 									</li>
 									<li class="nav-item">
 										<a class="dropdown-item">
-											<span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+											
 											<span>
 												<span>John Smith</span>
 												<span class="time">3 mins ago</span>
@@ -103,7 +103,7 @@
 									</li>
 									<li class="nav-item">
 										<a class="dropdown-item">
-											<span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+											
 											<span>
 												<span>John Smith</span>
 												<span class="time">3 mins ago</span>
@@ -130,7 +130,7 @@
 			<!-- /top navigation -->
 
 			<!-- page content -->
-			<div class="right_col" role="main">
+			<div class="right_col" role="main"style="height:650px">
 				<div class="">
 					<div class="page-title">
 						<div class="title_left">
@@ -159,38 +159,38 @@
 								</div>
 								<div class="x_content">
 									<br />
-									<form class="form-label-left input_mask">
+									<form class="form-label-left input_mask" id="store_datas">
 
 										
 
 										<div class="form-group row">
 											<label class="col-form-label col-md-3 col-sm-3 ">ID</label>
 											<div class="col-md-9 col-sm-9 ">
-												<input type="text" class="form-control" >
+												<input type="text" class="form-control" id="id">
 											</div>
 										</div>
 										<div class="form-group row">
 											<label class="col-form-label col-md-3 col-sm-3 ">Model </label>
 											<div class="col-md-9 col-sm-9 ">
-												<input type="text" class="form-control"  >
+												<input type="text" class="form-control"id="model"  >
 											</div>
 										</div>
 										<div class="form-group row">
 											<label class="col-form-label col-md-3 col-sm-3 ">HW Version</label>
 											<div class="col-md-9 col-sm-9 ">
-												<input type="text" class="form-control"  >
+												<input type="text" class="form-control" id="hw" >
 											</div>
 										</div>
 										<div class="form-group row">
 											<label class="col-form-label col-md-3 col-sm-3 ">SW Version</label>
 											<div class="col-md-9 col-sm-9 ">
-												<input type="text" class="form-control"  >
+												<input type="text" class="form-control" id="sw" >
 											</div>
 										</div>
 										<div class="form-group row">
-											<label class="col-form-label col-md-3 col-sm-3 ">Status</label>
+											<label class="col-form-label col-md-3 col-sm-3 ">Device_Name</label>
 											<div class="col-md-9 col-sm-9 ">
-												<input type="text" class="form-control"  >
+												<input type="text" class="form-control" id="device_name" >
 											</div>
 										</div>
 										
@@ -200,7 +200,7 @@
 												<button type="button" class="btn btn-success">Cancel</button>
 												
 												<button type="reset" class="btn btn-success">Reset</button>
-												<button type="submit" class="btn btn-success"><a href="form_advanced.html"style="color:white">Submit</button></a>
+												<a type="submit" class="btn btn-success" onclick="submit_form()" style="color:white" >Submit</a>
 											</div>
 										</div>
 
@@ -268,6 +268,9 @@
 	<!-- starrr -->
 	<script src="../static/vendors/starrr/dist/starrr.js"></script>
 	<!-- Custom Theme Scripts -->
-	<script src="../static/build/js/custom.min.js"></script>
+	<!--<script src="../static/build/js/custom.min.js"></script>-->
 
-</body></html>
+</body>
+
+<script src="../static/build/js/myscript.js"></script>
+</html>
